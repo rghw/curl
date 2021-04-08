@@ -682,7 +682,7 @@ static bool ipv4_normalize(const char *hostname, char *outp, size_t olen)
   bool done = FALSE;
   int n = 0;
   const char *c = hostname;
-  unsigned long parts[4];
+  unsigned long parts[4] = {0, 0, 0, 0};
 
   while(!done) {
     char *endp;
